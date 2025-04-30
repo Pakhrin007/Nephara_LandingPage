@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+.font-title{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-body{
+  font-family: 'Poppins', sans-serif;
+}
+
