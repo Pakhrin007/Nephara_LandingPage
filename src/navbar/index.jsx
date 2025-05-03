@@ -5,8 +5,8 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full z-50 top-0 start-0 bg-white  ">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
+    <nav className="sticky w-full z-50 top-0 start-0 bg-white">
+      <div className="max-w-[1280px] flex flex-wrap items-center justify-between mx-auto px-4 py-2">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={logo} className="h-8" alt="Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-black font-title">
@@ -15,11 +15,11 @@ const Navbar = () => {
         </a>
 
         {/* Buttons and Hamburger */}
-        <div className="flex md:order-2 items-center space-x-4">
-          <button className="text-black font-medium rounded-lg text-sm px-4 py-2 font-title">
+        <div className="flex md:order-2 items-center">
+          <button className="text-black font-medium rounded-lg text-[16px] px-4 py-2 font-title">
             Log in
           </button>
-          <button className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 font-title">
+          <button className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-[16px] px-4 py-2 font-title">
             Get started
           </button>
           <button
@@ -48,17 +48,36 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div
-          className={`w-full md:flex md:w-auto md:order-1 ${
-            menuOpen ? 'block' : 'hidden'
-          }`}
+          className={`w-full md:flex md:w-auto md:order-1 ${menuOpen ? 'block' : 'hidden'}`}
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white justify-end items-end">
-            <li>
+          <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white justify-end items-end mr-0">
+            {/* Features with Dropdown */}
+            <li className="relative group">
               <a href="#" className="block py-2 px-3 text-black font-title">
                 Features
               </a>
+              <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg hidden group-hover:block z-50">
+                <ul className="py-2 text-sm text-gray-700">
+                  <li>
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                      Feature One
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                      Feature Two
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                      Feature Three
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
+
             <li>
               <a href="#" className="block py-2 px-3 text-black font-title">
                 Pricing

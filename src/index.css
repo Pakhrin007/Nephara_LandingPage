@@ -1,10 +1,26 @@
 @import "tailwindcss";
 
-.font-title{
+.font-title {
   font-family: 'Montserrat', sans-serif;
 }
 
-.font-body{
+.font-body {
   font-family: 'Poppins', sans-serif;
 }
+
+
+@keyframes loop-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-loop-scroll {
+  animation: loop-scroll 12s linear infinite;
+}
+
+
 

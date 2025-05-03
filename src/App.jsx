@@ -1,10 +1,11 @@
-import Navbar from './navbar'
+
+import LandingPage from './landing-page'
 function App() {
 
   return (
     <>
-    <Navbar />
-        
+    <LandingPage />
+   
     </>
   )
 }
