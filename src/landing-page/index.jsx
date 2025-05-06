@@ -7,7 +7,7 @@ import Testimonial from "../ui/testimonials"
 import Sidebar from "./sidebar"
 const LandingPage = () => {
   return (
-    <div className="flex flex-col gap-y-[24px]   mx-auto">
+    <div className="flex flex-col gap-y-[24px]  ">
       <Navbar />
       <HeroSection />
       <InfiniteScroll />

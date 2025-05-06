@@ -1,66 +1,85 @@
-import React, { useState } from 'react';
-import avatarImg from '../../assets/images/logo.png'; // Adjust path as needed
+import React from 'react';
+import avatarImg from '../../assets/Images/logo.png'; // Placeholder avatar
+
+const testimonials = [
+  {
+    name: 'Patrick Nawrocki',
+    role: 'UX Manager at Superhabits',
+    text: "The lovely team at DesignMe has provided our startup with significant leverage. Their work is exceptionally professional, and Adrian is always attentive to our needs, taking the time to understand our briefs and offer valuable direction. Additionally, their turnaround times are impressively fast!",
+    avatar: avatarImg,
+    type: 'text',
+  },
+  {
+    name: 'Patrick Nawrocki',
+    role: 'UX Manager at Superhabits',
+    text: "The lovely team at DesignMe has provided our startup with significant leverage. Their work is exceptionally professional, and Adrian is always attentive to our needs, taking the time to understand our briefs and offer valuable direction. Additionally, their turnaround times are impressively fast!",
+    avatar: avatarImg,
+    type: 'text',
+  },
+  {
+    name: 'Patrick Nawrocki',
+    role: 'UX Manager at Superhabits',
+    text: "The lovely team at DesignMe has provided our startup with significant leverage. Their work is exceptionally professional, and Adrian is always attentive to our needs, taking the time to understand our briefs and offer valuable direction. Additionally, their turnaround times are impressively fast!",
+    avatar: avatarImg,
+    type: 'text',
+  },
+  {
+    name: 'Patrick Nawrocki',
+    role: 'UX Manager at Superhabits',
+    text: "The lovely team at DesignMe has provided our startup with significant leverage. Their work is exceptionally professional, and Adrian is always attentive to our needs, taking the time to understand our briefs and offer valuable direction. Additionally, their turnaround times are impressively fast!",
+    avatar: avatarImg,
+    type: 'text',
+  },
+ 
+  {
+    name: 'Rob West',
+    role: 'CEO of Kingdom Advisors',
+    text: "DesignMe has greatly exceeded our expectations. The communication is always excellent, the turnaround is extremely quick, and the designs are fresh, innovative, and spot on!",
+    avatar: avatarImg,
+    type: 'text',
+  },
+];
 
 function Testimonial() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const reviewsPerPage = 3;
-
-  const reviews = [
-    { userName: 'Alice', rating: 5, description: 'Amazing recipe! Easy to follow and delicious results.' },
-    { userName: 'Bob', rating: 4, description: 'Really enjoyed this dish. Will make it again!' },
-    { userName: 'Charlie', rating: 3, description: 'It was okay, maybe needs more spice for my taste.' },
-    { userName: 'Diana', rating: 5, description: 'Perfect for a quick dinner. My family loved it!' },
-    { userName: 'Ethan', rating: 4, description: 'Great balance of flavors. Easy to make!' },
-    { userName: 'Fiona', rating: 5, description: 'Loved it! Will be a staple in my kitchen.' },
-  ];
-
-  const handlePrevClick = () => {
-    setCurrentIndex((prevIndex) => {
-      const newIndex = prevIndex - reviewsPerPage;
-      return newIndex < 0 ? Math.floor((reviews.length - 1) / reviewsPerPage) * reviewsPerPage : newIndex;
-    });
-  };
-
-  const handleNextClick = () => {
-    setCurrentIndex((prevIndex) => {
-      const newIndex = prevIndex + reviewsPerPage;
-      return newIndex >= reviews.length ? 0 : newIndex;
-    });
-  };
-
-  const currentReviews = reviews.slice(currentIndex, currentIndex + reviewsPerPage);
-
   return (
-    <section id="testimonial" className="py-12 px-4">
-      <h2 className="text-center text-3xl font-semibold font-title mb-8">
-        What Our <span className="text-red-500">Users Say</span>
+    <section id="testimonial" className="py-16 px-4 bg-gray-50">
+      <h2 className="text-center text-3xl font-bold mb-12">
+        What Our <span className="text-red-500">Clients Say</span>
       </h2>
-      <div className="flex items-center justify-center gap-4">
-        <button onClick={handlePrevClick} className="text-lg px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">
-          ←
-        </button>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl w-full">
-          {currentReviews.map((review, index) => (
-            <div
-              key={index}
-              className="bg-gray-100 p-6 rounded-xl shadow-md flex flex-col items-center text-center  w-full min-h-[260px]"
-            >
-              <img
-                src={avatarImg}
-                alt="user"
-                className="w-16 h-16 rounded-full object-cover mb-3"
-              />
-              <h3 className="text-lg font-semibold">{review.userName}</h3>
-              <div className="text-yellow-400 text-xl my-1">
-                {'★'.repeat(Math.round(review.rating))}
+      <div className="grid gap-8 md:grid-cols-3 max-w-7xl mx-auto">
+        {testimonials.map((testimonial, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-2xl shadow-lg overflow-hidden relative flex flex-col justify-between"
+          >
+            {testimonial.type === 'text' ? (
+              <div className="p-6 flex flex-col h-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <img
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
+                  <div>
+                    <p className="font-semibold">{testimonial.name}</p>
+                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 text-sm">{testimonial.text}</p>
               </div>
-              <p className="text-sm text-gray-700">{review.description}</p>
-            </div>
-          ))}
-        </div>
-        <button onClick={handleNextClick} className="text-lg px-4 py-2 bg-gray-200 rounded hover:bg-gray-300">
-          →
-        </button>
+            ) : (
+              <div
+                className="relative h-full bg-cover bg-center text-white flex items-end"
+                style={{
+                  backgroundImage: `url(${testimonial.image})`,
+                  minHeight: '360px',
+                }}
+              >
+                
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );
