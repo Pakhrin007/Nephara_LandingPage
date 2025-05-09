@@ -59,21 +59,31 @@ const Navbar = () => {
               <a href="#" className="block py-2 px-3 text-black font-title">
                 Features
               </a>
-              <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg hidden group-hover:block z-50">
-                <ul className="py-2 text-sm text-gray-700">
+              <div className="absolute left-0  w-[300px] bg-white border border-gray-200 rounded-lg shadow-lg hidden group-hover:block z-50">
+                <ul className="py-2 text-sm text-gray-700 flex flex-col">
                   <li>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                      Feature One
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 font-title">
+                      Ai-Assistant
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                      Feature Two
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 font-title">
+                      Collaboration
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                      Feature Three
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 font-title">
+                      Documentation
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 font-title">
+                      Human Resource
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 font-title">
+                      Project Management
                     </a>
                   </li>
                 </ul>
