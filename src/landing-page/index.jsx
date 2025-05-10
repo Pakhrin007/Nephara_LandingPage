@@ -5,11 +5,12 @@ import InfiniteScroll from "../ui/infinite-scroll"
 import video from "../assets/video/video.mp4"
 import Testimonial from "../ui/testimonials"
 import Sidebar from "./sidebar"
+import testimonials from "../constants/landing-page-testinomial"
 const LandingPage = () => {
   return (
     <div className="flex flex-col gap-y-[24px]  ">
       <Navbar />
-      <HeroSection />
+      <HeroSection title="Inbox collaborations for teams that run on email" description="See what’s going on, know who’s doing what, and collaborate behind the scenes — without changing your workflow." video={video} />
       <InfiniteScroll />
       {/* -------------------------designed for Collaboration-------------------------- */}
 
@@ -127,7 +128,7 @@ const LandingPage = () => {
     
 
      
-      <Testimonial />
+      <Testimonial testimonials={testimonials} />
       <CTASection />
     </div>
   );

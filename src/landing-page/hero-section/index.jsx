@@ -1,16 +1,15 @@
-import video from "../../assets/video/video.mp4";
 
-const HeroSection = () => {
+const HeroSection = ({title,description,video}) => {
   return (
     <div className="flex flex-col items-center gap-y-6 px-4 py-10">
       
       {/* Content Section */}
       <div className="flex flex-col gap-y-6 w-full max-w-[900px] text-center">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-title leading-tight">
-          Inbox collaborations for teams that run on email
+          {title}
         </h1>
         <p className="text-gray-500 text-base sm:text-lg md:text-xl font-title">
-          See what’s going on, know who’s doing what, and collaborate behind the scenes — without changing your workflow.
+          {description}
         </p>
 
         {/* Buttons */}
