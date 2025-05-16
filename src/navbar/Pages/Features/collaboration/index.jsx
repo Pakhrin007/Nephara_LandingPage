@@ -2,25 +2,14 @@ import { useState } from 'react';
 import Navbar from '../../../../navbar/index';
 import HeroSection from '../../../../landing-page/hero-section/index';
 import Sidebar from './sidebar/index';
-import video from '../../../../assets/video/video.mp4';
 import InfiniteScroll from '../../../../ui/infinite-scroll';
 import Testimonial from '../../../../ui/testimonials';
 import CTASection from '../../../../ui/cta';
 import collaborationTestimonials from '../../../../constants/collaboration-testinomial/index';
-import aiassistant from "../../../../assets/Images/ai-assistant.png";
-
-// Reusable card component
-const CollaborationCard = ({ subtitle, description, image }) => (
-  <div className="flex flex-col gap-y-2 w-full">
-    <p className="sm:text-lg md:text-xl font-title font-medium text-gray-800">{subtitle}</p>
-    <p className="text-gray-600 text-base sm:text-lg md:text-xl font-title">{description}</p>
-    {image && (
-      <div className="flex justify-center bg-gray-100 rounded-md p-3">
-        <img src={image} alt="Collaboration in action" className="w-full h-auto object-contain" />
-      </div>
-    )}
-  </div>
-);
+import aiAssistant from "../../../../assets/Images/ai-assistant.png";
+import Ai from "../../../../assets/Images/Ai.jpg";
+import Ai2 from "../../../../assets/video/Ai.mp4";
+import Svg1 from "../../../../assets/Images/svg/svg1";
 
 const Collaboration = () => {
   return (
@@ -28,16 +17,14 @@ const Collaboration = () => {
       <Navbar />
 
       <HeroSection
-        title="Collaboration for Smarter Decision Making"
-        description="Leverage collaboration to analyze emails, extract key points, and boost your team's productivity effortlessly."
-        video={video}
+        title="Collaboration for Smarter Collaboration"
+        description="Use AI to analyze emails, extract key points, and boost team productivity."
+        video={Ai2}
       />
-
       <InfiniteScroll />
 
-      {/* Main Collaboration Section */}
-      <section className="flex flex-col items-center gap-y-10 max-w-[1280px] mx-auto px-4">
-        <div className="flex flex-col gap-y-6 w-full">
+      <div className="flex flex-col  gap-y-6 max-w-[1280px] mx-auto">
+      <div className="flex flex-col gap-y-6 w-full">
           <h1 className="text-[20px] font-title font-bold tracking-wide text-blue-300">
             Designed for Collaboration
           </h1>
@@ -46,68 +33,128 @@ const Collaboration = () => {
             Empower your team to share insights, communicate in real-time, and streamline decisions effortlessly.
           </p>
         </div>
+      </div>
 
-        <CollaborationCard
-          subtitle="Work as one team"
-          description="Discuss, review, and get things done with your team. Share context, provide feedback, and stay aligned—before the email is even sent."
-          image={aiassistant}
-        />
-
-        {/* Two-column section */}
-        <div className="flex justify-between sm:flex-row flex-col md:space-x-4 w-full gap-y-6">
-          <CollaborationCard
-            subtitle="Real-time collaboration"
-            description="Stay in sync with your teammates as you collaborate live on emails, notes, and decisions. No more waiting for replies or switching between tools."
-            image={aiassistant}
-          />
-          <CollaborationCard
-            subtitle="Smarter decision-making"
-            description="Use built-in AI to summarize conversations, highlight key points, and offer suggestions—all while working in your natural workflow."
-            image={aiassistant}
-          />
+      <div className="flex w-full flex-col gap-y-[26px] max-w-[1280px] mx-auto">
+        <div className="flex flex-col gap-y-2">
+          <div className="flex items-center gap-x-2">
+            <Svg1 />
+           
+          </div>
+          <h1 className="font-title font-medium  text-[24px]">Smarter Workflows</h1>
+          <p className="sm:text-lg md:text-xl font-medium">
+            AI organizes messages and meetings so your team gets straight to the point.
+          </p>
+          <p className="text-gray-500 text-base sm:text-lg md:text-xl ">
+            It highlights key insights from emails, helping you act faster and smarter.
+          </p>
+          <img src={aiAssistant} alt="ai-assistant" className="w-full h-full object-cover" />
         </div>
-      </section>
 
-      {/* Additional Section with Different Styling */}
-      <section className="flex flex-col items-center gap-y-10 bg-gray-100 py-12 w-full px-4">
-        <div className="flex flex-col gap-y-6 text-center max-w-[1280px] mx-auto">
-          <h1 className="text-[20px] font-title font-bold tracking-wide text-blue-300">
+        <div className="flex justify-between sm:flex-row flex-col md:space-x-8">
+          <div className="flex flex-col gap-y-2 mt-10">
+          <div className="flex items-center gap-x-2">
+            <Svg1 />
+           
+          </div>
+            <h1 className="font-title font-medium text-[24px]">AI-Driven Team Support</h1>
+            <p className="sm:text-lg md:text-xl font-medium">
+              AI helps you prioritize, summarize, and stay updated without extra effort.
+            </p>
+            <p className="text-gray-500 text-base sm:text-lg md:text-xl ">
+              Get important updates before hitting send — AI keeps everyone in sync.
+            </p>
+            <div className="flex justify-center bg-gray-300 rounded-md p-3">
+              <img src={aiAssistant} alt="ai-assistant" className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="flex flex-col gap-y-2 mt-10">
+          <div className="flex items-center gap-x-2">
+            <Svg1 />
+           
+          </div>
+            <h1 className="font-title font-medium text-[24px]">AI-Driven Team Support</h1>
+            <p className="sm:text-lg md:text-xl font-medium">
+              AI helps you prioritize, summarize, and stay updated without extra effort.
+            </p>
+            <p className="text-gray-500 text-base sm:text-lg md:text-xl ">
+              Get important updates before hitting send — AI keeps everyone in sync.
+            </p>
+            <div className="flex justify-center bg-gray-300 rounded-md p-3">
+              <img src={aiAssistant} alt="ai-assistant" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col  gap-y-6 bg-gray-100 pb-10 w-full">
+        <div className="flex flex-col gap-y-6 w-full max-w-[1280px] mx-auto mt-10">
+          <h1 className="text-[20px]  font-medium text-blue-300">
             Designed for Collaboration
           </h1>
-          <p className="text-[32px] sm:text-[38px] md:text-[46px] leading-tight font-title text-gray-900">
-            See what’s going on and collaborate behind the scenes – without changing your workflow.
+          <p className="text-[28px] ">
+            Collaborate smoothly with AI running in the background—always ready to help.
           </p>
         </div>
 
-        <div className="flex flex-col gap-y-8 max-w-[1280px] mx-auto w-full">
-          <CollaborationCard
-            subtitle="Efficient reviews"
-            description="Keep everyone on the same page by centralizing discussions and decisions in one place. Context stays clear and actions move faster."
-            image={aiassistant}
-          />
-          <div className="flex justify-between sm:flex-row flex-col md:space-x-4 w-full gap-y-6">
-            <CollaborationCard
-              subtitle="Context-aware suggestions"
-              description="Leverage AI to offer timely suggestions, detect risks, and keep conversations productive."
-            />
-            <CollaborationCard
-              subtitle="Cross-functional coordination"
-              description="Help teams across departments stay aligned with shared visibility and seamless communication."
-            />
+        <div className="flex w-full flex-col gap-y-[26px] max-w-[1280px] mx-auto">
+          <div className="flex flex-col gap-y-2">
+          <div className="flex items-center gap-x-2">
+            <Svg1 />
+           
+          </div>
+            <h1 className="font-medium text-[24px]">AI Makes It Easier</h1>
+            <p className="sm:text-lg md:text-xl  font-medium">
+              AI adapts to your team’s pace and tracks feedback automatically.
+            </p>
+            <p className="text-gray-500 text-base sm:text-lg md:text-xl ">
+              It helps everyone stay on the same page without the extra back-and-forth.
+            </p>
+            <img src={Ai} alt="ai-assistant" className="w-full h-full object-cover" />
+          </div>
+
+          <div className="flex justify-between sm:flex-row flex-col md:space-x-6">
+            <div className="flex flex-col gap-y-2">
+            <div className="flex items-center ">
+            <Svg1 />
+           
+          </div>
+              <h1 className="font-title font-medium text-[24px]">Real-Time Insights</h1>
+              <p className="sm:text-lg md:text-xl  font-medium">
+                AI finds tasks and key points from long emails and messages.
+              </p>
+              <p className="text-gray-500 text-base sm:text-lg md:text-xl ">
+                Get quick summaries so you spend less time reading and more time doing.
+              </p>
+            </div>
+            <div className="flex flex-col gap-y-2">
+            <div className="flex items-center gap-x-2">
+            <Svg1 />
+           
+          </div>
+              <h1 className="font-title font-medium text-[24px]">Smarter Email Drafting</h1>
+              <p className="sm:text-lg md:text-xl  font-medium">
+                Let AI draft replies, fix tone, and make emails sound just right.
+              </p>
+              <p className="text-gray-500 text-base sm:text-lg md:text-xl ">
+                Always send clear, polished messages with help from AI suggestions.
+              </p>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Sidebar and Final Section */}
-      <section className="flex w-full flex-col gap-y-[26px] max-w-[1280px] mx-auto px-4">
+      <div className="flex w-full flex-col gap-y-[26px] max-w-[1280px] mx-auto">
         <div className="flex flex-col gap-y-2">
-          <h1 className="font-title font-bold text-blue-300 text-[20px] tracking-wide">Designed for flexibility</h1>
-          <p className="text-gray-800 text-[28px] sm:text-[36px] md:text-[40px] font-title font-semibold">
-            Make collaboration work for you.
+          <h1 className="  text-blue-300 text-[20px] font-medium tracking-wide">
+            Designed for Flexibility
+          </h1>
+          <p className="text-gray-500 text-base text-[30px]">
+            Customize AI workflows to fit your team—summarize meetings or draft emails your way.
           </p>
         </div>
         <Sidebar />
-      </section>
+      </div>
 
       <Testimonial testimonials={collaborationTestimonials} />
       <CTASection />

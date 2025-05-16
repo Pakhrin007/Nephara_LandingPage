@@ -115,7 +115,7 @@ const AiAssistant = () => {
 
           <div className="flex justify-between sm:flex-row flex-col md:space-x-6">
             <div className="flex flex-col gap-y-2">
-            <div className="flex items-center gap-x-2">
+            <div className="flex items-center ">
             <Svg1 />
            
           </div>
