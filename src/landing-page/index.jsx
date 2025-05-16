@@ -2,15 +2,16 @@ import Navbar from "../navbar/index"
 import HeroSection from "./hero-section"
 import CTASection from "../ui/cta"
 import InfiniteScroll from "../ui/infinite-scroll"
-import video from "../assets/video/video.mp4"
 import Testimonial from "../ui/testimonials"
 import Sidebar from "./sidebar"
 import testimonials from "../constants/landing-page-testinomial"
+import fulldashoard from "../assets/video/full-dashboard.mp4"
+import aiassistant from "../assets/Images/ai-assistant.png"
 const LandingPage = () => {
   return (
     <div className="flex flex-col gap-y-[24px]  ">
       <Navbar />
-      <HeroSection title="Inbox collaborations for teams that run on email" description="See what’s going on, know who’s doing what, and collaborate behind the scenes — without changing your workflow." video={video} />
+      <HeroSection title="Inbox collaborations for teams that run on email" description="See what’s going on, know who’s doing what, and collaborate behind the scenes — without changing your workflow." video={fulldashoard} />
       <InfiniteScroll />
       {/* -------------------------designed for Collaboration-------------------------- */}
 
@@ -36,7 +37,8 @@ const LandingPage = () => {
       <h1 className="">pen</h1>
       <p className="sm:text-lg md:text-xl font-title font-medium">Discuss, review, and get things done with your team.</p>
       <p className="text-gray-500 text-base sm:text-lg md:text-xl font-title">Easily help one another with information and context, before the email is sent.</p>
-      <video src={video} autoPlay loop muted className="w-full h-full object-cover"></video>
+      {/* <video src={fulldashoard} autoPlay loop muted className="w-full h-full object-cover"></video> */}
+      <img src={aiassistant} className="w-full h-full object-center" alt="" />
       </div>
      
 
@@ -47,7 +49,7 @@ const LandingPage = () => {
           <p className="sm:text-lg md:text-xl font-title font-medium">Discuss, review, and get things done with your team.</p>
           <p className="text-gray-500 text-base sm:text-lg md:text-xl font-title">Easily help one another with information and context, before the email is sent.</p>
           <div className="flex justify-center bg-gray-300 rounded-md p-3">
-            <video src={video} autoPlay loop muted className="w-full h-full object-cover"></video>
+          <img src={aiassistant} className="w-full h-full object-center" alt="" />
           </div>
         </div>
         <div className="flex flex-col gap-y-2">
@@ -55,7 +57,7 @@ const LandingPage = () => {
           <p className="sm:text-lg md:text-xl font-title font-medium">Discuss, review, and get things done with your team.</p>
           <p className="text-gray-500 text-base sm:text-lg md:text-xl font-title">Easily help one another with information and context, before the email is sent.</p>
           <div className="flex justify-center bg-gray-300 rounded-md p-3">
-            <video src={video} autoPlay loop muted className="w-full h-full object-cover"></video>
+          <img src={aiassistant} className="w-full h-full object-center" alt="" />
           </div>
         </div>
 
@@ -84,7 +86,7 @@ const LandingPage = () => {
       <h1 className="">pen</h1>
       <p className="sm:text-lg md:text-xl font-title font-medium">Discuss, review, and get things done with your team.</p>
       <p className="text-gray-500 text-base sm:text-lg md:text-xl font-title">Easily help one another with information and context, before the email is sent.</p>
-      <video src={video} autoPlay loop muted className="w-full h-full object-cover"></video>
+      <img src={aiassistant} className="w-full h-full object-center" alt="" />
       </div>
      
 

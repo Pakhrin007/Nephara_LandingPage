@@ -36,6 +36,24 @@ const aiAssistantTestimonials = [
       name: "Dom Taylor",
       title: "CEO of NextLevel",
     },
+    {
+      id: 5,
+      avatar: Ai,
+      fullImage: Ai,
+      quote:
+        "Thanks to the AI assistant, our communication is now more efficient and focused. It even drafts email replies and flags key topics automatically—brilliant!",
+      name: "Dom Taylor",
+      title: "CEO of NextLevel",
+    },
+    {
+      id: 6,
+      avatar: Ai,
+      fullImage: Ai,
+      quote:
+        "Thanks to the AI assistant, our communication is now more efficient and focused. It even drafts email replies and flags key topics automatically—brilliant!",
+      name: "Dom Taylor",
+      title: "CEO of NextLevel",
+    },
   ];
   
   export default aiAssistantTestimonials;
