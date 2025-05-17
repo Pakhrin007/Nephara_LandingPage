@@ -4,7 +4,7 @@ import CTASection from "../ui/cta"
 import InfiniteScroll from "../ui/infinite-scroll"
 import Testimonial from "../ui/testimonials"
 import Sidebar from "./sidebar/index"
-import testimonials from "../constants/landing-page-testinomial/index"
+import testimonials from "../constants/landing-page-testimonial/index"
 import fulldashoard from "../assets/video/full-dashboard.mp4"
 import aiassistant from "../assets/Images/ai-assistant.png"
 import Svg1 from '../assets/Images/svg/svg1'
