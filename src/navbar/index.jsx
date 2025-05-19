@@ -6,11 +6,12 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky w-full z-50 top-0 start-0 bg-white">
+    <nav className="sticky w-full z-50 top-0 start-0 backdrop-blur-md bg-white/30 border-b border-white/30 shadow-sm">
+
       <div className="max-w-[1280px] flex flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link to='/' className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={logo} className="h-8" alt="Logo" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap text-black font-title">
+          <span className="self-center text-2xl font-semibold whitespace-nowrap text-black ">
             Nephara
           </span>
         </Link>
@@ -51,10 +52,10 @@ const Navbar = () => {
 
         {/* Navigation Links + Mobile Buttons */}
         <div
-          className={`w-full md:flex md:w-auto md:order-1 bg-gray-50 border-t border-gray-100 ${menuOpen ? 'block' : 'hidden'}`}
+          className={`w-full md:flex md:w-auto md:order-1 md:bg-transparent md:border-none ${menuOpen ? 'block' : 'hidden'}`}
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white justify-end items-end mr-0">
+          <ul className="flex flex-col p-4 mt-4 border md:border-none md:bg-transparent border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0  justify-end items-end mr-0">
             <li className="relative group">
               <a href="#" className="block py-2 px-3 text-black font-title">
                 Features
